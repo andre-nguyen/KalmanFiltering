@@ -1,0 +1,79 @@
+% !TEX root = base.tex
+
+\begin{homeworkProblem}
+  Prove Lemma 1.4 \textit{If $A$ and $B$ are $n \times n$ matrices, then}
+\begin{align}
+  \tr A^\top &= \tr A\\
+  \tr(A + B) &= \tr A + \tr B\\
+  \tr(\lambda A) &= \lambda \tr A
+\end{align}
+
+\textbf{Solution}
+
+By definition the trace of a matrix is the sum of the diagonal elements
+\[
+  \tr A = \sum_{i=1}^n a_{ii}
+\]
+
+So for $n = 3$ then we have
+\[
+  A = \begin{bmatrix}
+  a_{11} & a_{12} & a_{13}\\
+  a_{21} & a_{22} & a_{23}\\
+  a_{31} & a_{32} & a_{33}
+\end{bmatrix}, \lambda A = \begin{bmatrix}
+\lambda a_{11} & \lambda a_{12} & \lambda a_{13}\\
+\lambda a_{21} & \lambda a_{22} & \lambda a_{23}\\
+\lambda a_{31} & \lambda a_{32} & \lambda a_{33}
+\end{bmatrix},\ A^\top = \begin{bmatrix}
+a_{11} & a_{21} & a_{31}\\
+a_{12} & a_{22} & a_{32}\\
+a_{13} & a_{23} & a_{33}
+\end{bmatrix}, \ B = \begin{bmatrix}
+b_{11} & b_{12} & b_{13}\\
+b_{21} & b_{22} & b_{23}\\
+b_{31} & b_{32} & b_{33}
+\end{bmatrix}
+\]
+\[
+A + B = \begin{bmatrix}
+a_{11} + b_{11} & a_{12} + b_{12} & a_{13} + b_{13}\\
+a_{21} + b_{21} & a_{22} + b_{22} & a_{23} + b_{23}\\
+a_{31} + b_{31} & a_{32} + b_{32} & a_{33} + b_{33}
+\end{bmatrix}
+\]
+
+The proof of (1) is trivial:
+\[
+  \tr A = a_{11} + a_{22} + a_{33} = \tr A^\top
+\]
+
+The proof of (2) is also trivial:
+\[
+  \tr (A+B) = a_{11} + b_{11} + a_{22} + b_{22} + a_{33} + b_{33}
+\]
+\[
+  \tr A + \tr B = a_{11} + a_{22} + a_{33} + b_{11} + b_{22} + b_{33}
+\]
+
+The proof of (3) is also also trivial:
+\[
+  \tr(\lambda A) = \lambda a_{11} + \lambda a_{22} + \lambda a_{33} = \lambda (a_{11} + a_{22} + a_{33})
+  = \lambda \tr A
+\]
+
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+  Prove lemma 1.6 \textit{Let $A$ be an $n \times n$ matrix. Then}
+  \begin{align}
+      \tr A \leq (n \tr AA^\top)^{1/2}
+  \end{align}
+
+  \textbf{Solution}
+
+  
+
+\end{homeworkProblem}
