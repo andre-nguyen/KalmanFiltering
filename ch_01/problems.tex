@@ -3,12 +3,13 @@
 \begin{homeworkProblem}
   Prove Lemma 1.4 \textit{If $A$ and $B$ are $n \times n$ matrices, then}
 \begin{align}
-  \tr A^\top &= \tr A\\
-  \tr(A + B) &= \tr A + \tr B\\
-  \tr(\lambda A) &= \lambda \tr A
+  \tr A^\top      &= \tr A\\
+  \tr(A + B)      &= \tr A + \tr B\\
+  \tr(\lambda A)  &= \lambda \tr A\\
+  \tr(A^\top A)   &= \sum_{i=1}^n \sum_{j=1}^m a^2_{ij}
 \end{align}
 
-\textbf{Solution}
+\solution
 
 By definition the trace of a matrix is the sum of the diagonal elements
 \[
@@ -62,6 +63,31 @@ The proof of (3) is also also trivial:
   = \lambda \tr A
 \]
 
+The proof of (4) is
+
+\[
+  A =
+    \begin{bmatrix}
+      a & b\\
+      c & d
+    \end{bmatrix},
+  A^\top =
+    \begin{bmatrix}
+      a & c\\
+      b & d
+    \end{bmatrix}
+\]
+\[
+  A^\top A =
+  \begin{bmatrix}
+    a^2+b^2 & ac+bd\\
+    ac+bd & c^2+d^2
+  \end{bmatrix}
+\]
+\[
+  \tr ( A^\top A ) = a^2 + b^2 + c^2 + d^2
+\]
+
 \end{homeworkProblem}
 
 \pagebreak
@@ -72,8 +98,33 @@ The proof of (3) is also also trivial:
       \tr A \leq (n \tr AA^\top)^{1/2}
   \end{align}
 
-  \textbf{Solution}
+  \solution
+\[
+  \tr A = \sum_{i=1}^n a_{ii}
+\]
+\[
+  \tr(A^\top A)   &= \sum_{i=1}^n \sum_{j=1}^m a^2_{ij}
+\]
 
-  
+\[
+  \sum_{i=1}^n a_{ii} &\leq (n \sum_{i=1}^n \sum_{j=1}^n a^2_{ij})^{1/2}
+\]
+Square all the terms
+\[
+  (\sum_{i=1}^n a_{ii})^2 &\leq n \sum_{i=1}^n \sum_{j=1}^n a^2_{ij}
+\]
+Square of sums $\leq$ sum of squares
+\[
+  (\sum_{i=1}^n a_{ii})^2 &\leq n \sum a_{ii}^2 \leq n \sum_{i=1}^n \sum_{j=1}^n a^2_{ij}
+\]
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+  Give an example of two matrices $A$ and $B$ such that $A \geq B \geq 0$ but for which the inequality $AA^\top \geq BB^\top$ is not satisfied.
+
+  \solution
+
 
 \end{homeworkProblem}
